@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARJUN DUBAI™ – Toss & Match Reading</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','863598106480693');
+fbq('track','PageView');
+</script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+      linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.96)),
+      url("arjun-bg.png") center/cover no-repeat;
+}
+
+/* GLASS CARD */
+.container{
+    width:92%;
+    max-width:430px;
+    padding:36px 26px;
+    border-radius:28px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    box-shadow:
+      0 45px 100px rgba(0,0,0,.9),
+      inset 0 0 0 1px rgba(255,255,255,.12);
+    color:#fff;
+    text-align:center;
+    animation:fadeIn .9s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(30px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+/* HEADER */
+.header h1{
+    font-size:30px;
+    letter-spacing:1.6px;
+    background:linear-gradient(90deg,#ffffff,#eaeaea,#ffd36e);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header p{
+    margin-top:8px;
+    font-size:13px;
+    color:#e0e0e0;
+    letter-spacing:.4px;
+}
+
+/* COUNTER */
+.counter{
+    margin:24px 0;
+    font-size:16px;
+    font-weight:800;
+    color:#ffd36e;
+}
+
+/* CONTENT */
+.features{
+    margin:22px 0;
+}
+
+.features p{
+    font-size:14px;
+    margin-bottom:14px;
+    color:#f5f5f5;
+    line-height:1.45;
+}
+
+.features span{
+    color:#4facfe;
+    font-weight:800;
+}
+
+/* HIGHLIGHT CTA BUTTON */
+.join-btn{
+    margin-top:18px;
+    width:100%;
+    padding:19px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:1px;
+    cursor:pointer;
+    color:#001010;
+    background:linear-gradient(135deg,#00ffd5,#4facfe,#7bff00);
+    box-shadow:
+      0 0 25px rgba(79,172,254,.95),
+      0 0 55px rgba(0,255,213,.8),
+      0 20px 55px rgba(79,172,254,.8);
+    animation:pulseGlow 2s infinite;
+    transition:.35s ease;
+}
+
+.join-btn:hover{
+    transform:scale(1.06);
+}
+
+/* BUTTON ANIMATION */
+@keyframes pulseGlow{
+    0%{
+        box-shadow:
+          0 0 25px rgba(79,172,254,.9),
+          0 0 55px rgba(0,255,213,.7);
+    }
+    50%{
+        box-shadow:
+          0 0 40px rgba(79,172,254,1),
+          0 0 85px rgba(0,255,213,.95);
+    }
+    100%{
+        box-shadow:
+          0 0 25px rgba(79,172,254,.9),
+          0 0 55px rgba(0,255,213,.7);
+    }
+}
+
+/* STATUS */
+.status{
+    display:none;
+    margin-top:16px;
+    font-size:13px;
+    color:#7dffb3;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:22px;
+    font-size:11px;
+    color:#cfcfcf;
+    letter-spacing:.3px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>ARJUN DUBAI 🥎🏏</h1>
+        <p>Calm Toss & Match Reading – No Noise</p>
+    </div>
+
+    <div class="counter">
+        ⚡ Trusted by <span id="count">0</span>+ subscribers
+    </div>
+
+    <div class="features">
+        <p>🏏 <span>IPL Toss Match Pass</span> – flow based reading</p>
+        <p>❄️ <span>BBL Toss Match Pass</span> – pitch & condition focus</p>
+        <p>👑 <span>WPL Toss Match Pass</span> – momentum clarity</p>
+        <p>🌍 <span>World Cup Toss Match Pass</span> – pressure zones</p>
+        <p>🛑 Informational only — no betting, no fake promises</p>
+    </div>
+
+    <button class="join-btn" onclick="joinNow()">
+        JOIN FREE TELEGRAM CHANNEL
+    </button>
+
+    <div class="status" id="statusText">
+        Opening Telegram…
+    </div>
+
+    <div class="footer">
+        For informational & entertainment purpose only
+    </div>
+</div>
+
+<script>
+let target = 59926;
+let count = 0;
+
+let counter = setInterval(()=>{
+    count += 197;
+    if(count >= target){
+        count = target;
+        clearInterval(counter);
+    }
+    document.getElementById("count").innerText = count.toLocaleString();
+}, 25);
+
+let joinIntent=false;
+function joinNow(){
+    joinIntent=true;
+    document.getElementById("statusText").style.display="block";
+    setTimeout(()=>{
+        window.location.href="https://t.me/+mtTuBYb1u4o0NDk1";
+    },600);
+}
+
+document.addEventListener("visibilitychange",()=>{
+    if(document.hidden && joinIntent){
+        fbq('trackCustom','TelegramJoinIntent');
+        joinIntent=false;
+    }
+});
+</script>
+
+</body>
+</html>
