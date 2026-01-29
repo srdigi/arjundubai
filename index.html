@@ -23,146 +23,160 @@ fbq('init','863598106480693');
 fbq('track','PageView');
 </script>
 
+<!-- GOOGLE FONT (CURSIVE + BOLD) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', system-ui, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Playfair Display', cursive;
+font-weight:700;
 }
 
-/* BACKGROUND */
+/* BACKGROUND IMAGE */
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:
-      linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.96)),
-      url("arjun-bg.png") center/cover no-repeat;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
+url("arjun.jpg") center/cover no-repeat;
+padding-bottom:90px;
 }
 
-/* GLASS CARD */
+/* GLASS CONTAINER */
 .container{
-    width:92%;
-    max-width:430px;
-    padding:36px 26px;
-    border-radius:28px;
-    background:rgba(255,255,255,.06);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
-    box-shadow:
-      0 45px 100px rgba(0,0,0,.9),
-      inset 0 0 0 1px rgba(255,255,255,.12);
-    color:#fff;
-    text-align:center;
-    animation:fadeIn .9s ease;
+width:92%;
+max-width:430px;
+padding:38px 26px;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(26px);
+-webkit-backdrop-filter:blur(26px);
+box-shadow:
+0 40px 90px rgba(0,0,0,.85),
+inset 0 0 0 1px rgba(255,255,255,.25);
+color:#fff;
+text-align:center;
+animation:fadeIn .9s ease;
 }
 
 @keyframes fadeIn{
-    from{opacity:0;transform:translateY(30px)}
-    to{opacity:1;transform:translateY(0)}
+from{opacity:0;transform:translateY(25px)}
+to{opacity:1;transform:translateY(0)}
 }
 
 /* HEADER */
 .header h1{
-    font-size:30px;
-    letter-spacing:1.6px;
-    background:linear-gradient(90deg,#ffffff,#eaeaea,#ffd36e);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:32px;
+letter-spacing:2px;
+background:linear-gradient(90deg,#ffffff,#ffe08a);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .header p{
-    margin-top:8px;
-    font-size:13px;
-    color:#e0e0e0;
-    letter-spacing:.4px;
+margin-top:10px;
+font-size:14px;
+color:#f1f1f1;
+font-style:italic;
 }
 
 /* COUNTER */
 .counter{
-    margin:24px 0;
-    font-size:16px;
-    font-weight:800;
-    color:#ffd36e;
+margin:24px 0;
+font-size:17px;
+font-weight:700;
+color:#ffd36e;
+}
+
+/* BAT BALL */
+.bat-ball{
+margin:18px 0;
+font-size:30px;
+animation:swing 1.8s infinite;
+}
+
+@keyframes swing{
+0%{transform:rotate(0deg)}
+25%{transform:rotate(-15deg)}
+50%{transform:rotate(0deg)}
+75%{transform:rotate(15deg)}
+100%{transform:rotate(0deg)}
 }
 
 /* CONTENT */
-.features{
-    margin:22px 0;
-}
-
 .features p{
-    font-size:14px;
-    margin-bottom:14px;
-    color:#f5f5f5;
-    line-height:1.45;
+font-size:15px;
+margin-bottom:16px;
+line-height:1.5;
+color:#ffffff;
 }
 
 .features span{
-    color:#4facfe;
-    font-weight:800;
+color:#7df9ff;
+font-weight:700;
 }
 
-/* HIGHLIGHT CTA BUTTON */
+/* CTA BUTTON */
 .join-btn{
-    margin-top:18px;
-    width:100%;
-    padding:19px;
-    border:none;
-    border-radius:50px;
-    font-size:16px;
-    font-weight:900;
-    letter-spacing:1px;
-    cursor:pointer;
-    color:#001010;
-    background:linear-gradient(135deg,#00ffd5,#4facfe,#7bff00);
-    box-shadow:
-      0 0 25px rgba(79,172,254,.95),
-      0 0 55px rgba(0,255,213,.8),
-      0 20px 55px rgba(79,172,254,.8);
-    animation:pulseGlow 2s infinite;
-    transition:.35s ease;
+margin-top:20px;
+width:100%;
+padding:20px;
+border:none;
+border-radius:60px;
+font-size:16px;
+font-weight:700;
+cursor:pointer;
+letter-spacing:1px;
+color:#001010;
+background:linear-gradient(135deg,#00ffd5,#ffe259,#ffa751);
+box-shadow:
+0 0 25px rgba(255,226,89,.9),
+0 0 60px rgba(0,255,213,.8);
+animation:pulseGlow 2s infinite;
 }
 
-.join-btn:hover{
-    transform:scale(1.06);
-}
-
-/* BUTTON ANIMATION */
 @keyframes pulseGlow{
-    0%{
-        box-shadow:
-          0 0 25px rgba(79,172,254,.9),
-          0 0 55px rgba(0,255,213,.7);
-    }
-    50%{
-        box-shadow:
-          0 0 40px rgba(79,172,254,1),
-          0 0 85px rgba(0,255,213,.95);
-    }
-    100%{
-        box-shadow:
-          0 0 25px rgba(79,172,254,.9),
-          0 0 55px rgba(0,255,213,.7);
-    }
+0%{transform:scale(1)}
+50%{transform:scale(1.06)}
+100%{transform:scale(1)}
 }
 
-/* STATUS */
-.status{
-    display:none;
-    margin-top:16px;
-    font-size:13px;
-    color:#7dffb3;
+/* FLOATING CTA */
+.floating-btn{
+position:fixed;
+bottom:16px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+max-width:420px;
+padding:17px;
+border-radius:60px;
+background:linear-gradient(135deg,#ffdd00,#ff8a00);
+color:#1b1b1b;
+font-size:15px;
+font-weight:700;
+text-align:center;
+box-shadow:0 18px 45px rgba(255,140,0,.85);
+animation:floatPulse 1.8s infinite;
+cursor:pointer;
+z-index:999;
 }
 
-/* FOOTER */
+@keyframes floatPulse{
+0%{transform:translateX(-50%) scale(1)}
+50%{transform:translateX(-50%) scale(1.07)}
+100%{transform:translateX(-50%) scale(1)}
+}
+
 .footer{
-    margin-top:22px;
-    font-size:11px;
-    color:#cfcfcf;
-    letter-spacing:.3px;
+margin-top:22px;
+font-size:11px;
+color:#f0f0f0;
 }
 </style>
 </head>
@@ -170,64 +184,47 @@ body{
 <body>
 
 <div class="container">
-    <div class="header">
-        <h1>ARJUN DUBAI 🥎🏏</h1>
-        <p>Calm Toss & Match Reading – No Noise</p>
-    </div>
-
-    <div class="counter">
-        ⚡ Trusted by <span id="count">0</span>+ subscribers
-    </div>
-
-    <div class="features">
-        <p>🏏 <span>IPL Toss Match Pass</span> – flow based reading</p>
-        <p>❄️ <span>BBL Toss Match Pass</span> – pitch & condition focus</p>
-        <p>👑 <span>WPL Toss Match Pass</span> – momentum clarity</p>
-        <p>🌍 <span>World Cup Toss Match Pass</span> – pressure zones</p>
-        <p>🛑 Informational only — no betting, no fake promises</p>
-    </div>
-
-    <button class="join-btn" onclick="joinNow()">
-        JOIN FREE TELEGRAM CHANNEL
-    </button>
-
-    <div class="status" id="statusText">
-        Opening Telegram…
-    </div>
-
-    <div class="footer">
-        For informational & entertainment purpose only
-    </div>
+<div class="header">
+<h1>ARJUN DUBAI 🥎🏏</h1>
+<p>Calm Toss & Match Reading – No Noise</p>
 </div>
 
+<div class="counter">
+⚡ Trusted by <span id="count">0</span>+ subscribers
+</div>
+
+<div class="bat-ball">🏏⚾</div>
+
+<div class="features">
+<p><span>IPL Toss Match Pass</span></p>
+<p><span>BBL Toss Match Pass</span></p>
+<p><span>WPL Toss Match Pass</span></p>
+<p><span>World Cup Toss Match Pass</span></p>
+<p>Informational only • No betting</p>
+</div>
+
+<button class="join-btn" onclick="joinNow()">JOIN FREE TELEGRAM</button>
+
+<div class="footer">
+For informational & entertainment purpose only
+</div>
+</div>
+
+<div class="floating-btn" onclick="joinNow()">🚀 JOIN FREE TELEGRAM</div>
+
 <script>
-let target = 59926;
-let count = 0;
+let target=59926,count=0;
+let counter=setInterval(()=>{
+count+=197;
+if(count>=target){count=target;clearInterval(counter)}
+document.getElementById("count").innerText=count.toLocaleString();
+},25);
 
-let counter = setInterval(()=>{
-    count += 197;
-    if(count >= target){
-        count = target;
-        clearInterval(counter);
-    }
-    document.getElementById("count").innerText = count.toLocaleString();
-}, 25);
-
-let joinIntent=false;
 function joinNow(){
-    joinIntent=true;
-    document.getElementById("statusText").style.display="block";
-    setTimeout(()=>{
-        window.location.href="https://t.me/+mtTuBYb1u4o0NDk1";
-    },600);
+setTimeout(()=>{
+window.location.href="https://t.me/+mtTuBYb1u4o0NDk1";
+},400);
 }
-
-document.addEventListener("visibilitychange",()=>{
-    if(document.hidden && joinIntent){
-        fbq('trackCustom','TelegramJoinIntent');
-        joinIntent=false;
-    }
-});
 </script>
 
 </body>
